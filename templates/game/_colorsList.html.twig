@@ -1,0 +1,6 @@
+{#     {% include 'game/_colorsList.html.twig' %} #}
+
+{% for color in colors %}
+   {{ color.value }}
+    {% if loop.index != loop.length %}-{% endif %}
+{% endfor %}

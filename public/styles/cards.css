@@ -1,0 +1,68 @@
+.cards-bg {
+    height:120px;
+    width:80px;
+    background-color: antiquewhite;
+}
+
+.cards {
+    height:120px;
+    width:80px;
+    background-image: url("../images/real-cards.png");
+}
+
+.fun {
+    background-image: url("../images/cards.png");
+}
+
+.SB{background-position:calc(1*-80px) 0;}
+.SC{background-position:calc(2*-80px) 0;}
+.SD{background-position:calc(3*-80px) 0;}
+.SE{background-position:calc(4*-80px) 0;}
+.SF{background-position:calc(5*-80px) 0;}
+.SG{background-position:calc(6*-80px) 0;}
+.SH{background-position:calc(7*-80px) 0;}
+.SI{background-position:calc(8*-80px) 0;}
+.ST{background-position:calc(9*-80px) 0;}
+.SJ{background-position:calc(10*-80px) 0;}
+.SQ{background-position:calc(11*-80px) 0;}
+.SK{background-position:calc(12*-80px) 0;}
+.SA{background-position:calc(0*-80px) 0;}
+.HB{background-position:calc(1*-80px) -120px;}
+.HC{background-position:calc(2*-80px) -120px;}
+.HD{background-position:calc(3*-80px) -120px;}
+.HE{background-position:calc(4*-80px) -120px;}
+.HF{background-position:calc(5*-80px) -120px;}
+.HG{background-position:calc(6*-80px) -120px;}
+.HH{background-position:calc(7*-80px) -120px;}
+.HI{background-position:calc(8*-80px) -120px;}
+.HT{background-position:calc(9*-80px) -120px;}
+.HJ{background-position:calc(10*-80px) -120px;}
+.HQ{background-position:calc(11*-80px) -120px;}
+.HK{background-position:calc(12*-80px) -120px;}
+.HA{background-position:calc(0*-80px) -120px;}
+.CB{background-position:calc(1*-80px) -240px;}
+.CC{background-position:calc(2*-80px) -240px;}
+.CD{background-position:calc(3*-80px) -240px;}
+.CE{background-position:calc(4*-80px) -240px;}
+.CF{background-position:calc(5*-80px) -240px;}
+.CG{background-position:calc(6*-80px) -240px;}
+.CH{background-position:calc(7*-80px) -240px;}
+.CI{background-position:calc(8*-80px) -240px;}
+.CT{background-position:calc(9*-80px) -240px;}
+.CJ{background-position:calc(10*-80px) -240px;}
+.CQ{background-position:calc(11*-80px) -240px;}
+.CK{background-position:calc(12*-80px) -240px;}
+.CA{background-position:calc(0*-80px) -240px;}
+.DB{background-position:calc(1*-80px) -360px;}
+.DC{background-position:calc(2*-80px) -360px;}
+.DD{background-position:calc(3*-80px) -360px;}
+.DE{background-position:calc(4*-80px) -360px;}
+.DF{background-position:calc(5*-80px) -360px;}
+.DG{background-position:calc(6*-80px) -360px;}
+.DH{background-position:calc(7*-80px) -360px;}
+.DI{background-position:calc(8*-80px) -360px;}
+.DT{background-position:calc(9*-80px) -360px;}
+.DJ{background-position:calc(10*-80px) -360px;}
+.DQ{background-position:calc(11*-80px) -360px;}
+.DK{background-position:calc(12*-80px) -360px;}
+.DA{background-position:calc(0*-80px) -360px;}

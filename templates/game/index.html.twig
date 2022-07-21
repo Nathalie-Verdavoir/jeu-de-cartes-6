@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cards index{% endblock %}
+
+{% block body %}
+    <h1>Cards index</h1>
+        Voici toutes les cartes mélangées : 
+        <a class="btn btn-success" href={{ path("game_init") }}>Commencer à jouer</a>
+        <a class="btn btn-success" href={{ path("game_index") }}>Mélanger à nouveau</a>
+        {% set c=0 %}
+        {% for card in cards %}
+            {% if c == 0 %}
+                <div class="card d-flex flex-row justify-content-around my-3 py-1">
+            {% endif %}   
+                {% set c=c+1 %}
+                <span class="cards border d-inline f32 {{card.color.name}}{{card.value.name}}" title="{{card.color.name}}{{card.value.name}}"></span>
+            {% if c == 13 %}
+                {% set c=0 %}
+                </div>
+            {% endif %}  
+        {% else %}
+            
+                <td colspan="4">no records found</td>
+          
+        {% endfor %}
+        
+{% endblock %}

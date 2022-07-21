@@ -1,0 +1,9 @@
+{
+    "name": "Bureau des légendes",
+    "short_name": "BDL",
+    "start_url": "./?utm_source=web_app_manifest",
+    "display": "standalone",
+    "dir": "rtl",
+    "lang": "fr",
+    "description": "Une fan qui fait une formation de dev se lache!"
+  }

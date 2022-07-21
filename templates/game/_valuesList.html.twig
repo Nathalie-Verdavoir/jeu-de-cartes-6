@@ -1,0 +1,6 @@
+{# {% include 'game/_valuesList.html.twig' %} #}
+
+ {% for value in values %}
+    {{ value.value }}
+    {% if loop.index != loop.length %}-{% endif %}
+{% endfor %}

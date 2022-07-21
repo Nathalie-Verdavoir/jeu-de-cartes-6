@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jeu{% endblock %}
+
+{% block body %}
+    <div class="card ">
+        <h1 class="card-header bg-info">Jeu</h1>
+        {% set game = app.session.get('game') %}
+        
+        {% set deck = game.deck %}
+        <div class="d-flex flex-row justify-content-around my-3 py-1">
+            <a class="btn btn-success" href={{ path("game_init") }}>Nouvelle partie</a>
+            <a class="btn btn-warning" href={{ path("game_index") }}>Voir le jeu complet mélangé</a>
+        </div>   
+        <div class="d-flex flex-row justify-content-around my-3 py-1">
+            <span>Bon ordre des couleurs :
+                {% include 'game/_colorsList.html.twig' with  {'colors': deck.getGoodOrderColors} %}
+            </span>
+            <span>Bon ordre des valeurs :
+               {% include 'game/_valuesList.html.twig' with  {'values': deck.getGoodOrderValues} %} 
+            </span>
+        </div>
+        {% include 'game/_hand.html.twig' with  {'cardsTemplate': game.cardsTemplate, 'cards': app.session.get('orderedResult'), 'bg': 'success'} %}
+
+        <div class="d-flex flex-row justify-content-around my-3 py-1">
+            <span>Mélange des couleurs :
+                {% include 'game/_colorsList.html.twig' with {'colors': deck.getMixedColors} %}
+            </span>
+            <span>Mélange des valeurs :
+                {% include 'game/_valuesList.html.twig' with  {'values': deck.getMixedValues} %}
+            </span>
+        </div>
+        {% include 'game/_hand.html.twig' with  {'cardsTemplate': game.cardsTemplate, 'cards': app.session.get('unorderedResult'), 'bg': 'warning'} %}
+    </div> 
+{% endblock %}

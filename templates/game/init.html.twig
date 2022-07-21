@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue !{% endblock %}
+
+{% block body %}
+<div class="card ">
+    <h1 class="card-header">Bienvenue !</h1>
+{{ form_start(form) }}
+    <div class="d-flex align-items-baseline justify-content-center">
+        {{ form_widget(form) }}
+    </div>
+    {% set game = app.session.get('game') %}
+    {% set deck = game.deck %}
+    <span class="d-flex align-items-baseline justify-content-center">
+        <a class="btn btn-danger ms-3 mt-3" href="{{ path("game_random_colors")}}">Changer l'ordre des couleurs aléatoirement</a>
+        <span class="ms-2">Ou déplacez-les pour choisir votre ordre préféré.</span>
+    </span>
+    <div class="container-drop">
+        {% for color in deck.mixedColors %}
+            <div draggable="true" id="{{ color.name }}" class="box colors red">{{ color.value}}</div>
+        {% endfor %}
+    </div>
+    <span class="d-flex align-items-baseline justify-content-center">
+        <a class="btn btn-success ms-3 mt-3" href="{{ path("game_random_values")}}">Changer l'ordre des valeurs aléatoirement</a>
+        <span class="ms-2">Ou déplacez-les pour choisir votre ordre préféré.</span>
+    </span>  
+    <div class="container-drop">
+        {% for value in deck.mixedValues %}
+            <div draggable="true" id="{{ value.name }}" class="box values green">{{ value.value}}</div>
+        {% endfor %}
+    </div><a class="btn btn-danger" href="{{ path("game_reset")}}">Reset</a>
+    <div class="d-flex justify-content-center">
+
+        <button class="btn btn-primary">Tirer</button>
+    </div>
+{{ form_end(form) }}
+</div>
+    
+{% endblock %}

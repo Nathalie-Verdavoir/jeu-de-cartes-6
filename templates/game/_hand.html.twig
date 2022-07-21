@@ -1,0 +1,11 @@
+{#     {% include 'game/_hand.html.twig' %} #}
+
+<div class="bg-{{bg}} d-flex flex-row flex-wrap my-3 py-1">
+    {% for card in cards  %}
+        <div class="container-drop cards-bg d-flex flex-row rounded-2 m-2 p-0">
+            <span draggable="true" class="cards box d-inline f32 {{cardsTemplate}} {{ card.color.name }}{{ card.value.name }}" title="{{ card.color.name }}{{card.value.name }}"></span>
+        </div> 
+    {% else %}
+        no records found
+    {% endfor %}
+</div>
