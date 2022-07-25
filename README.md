@@ -1,4 +1,4 @@
-# jeu-de-cartes-webnet-6
+# jeu-de-cartes-6
 
 Toujours le même jeu de cartes mais en version symfony 6.1 et php 8.1 (enums)
 
